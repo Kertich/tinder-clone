@@ -1,5 +1,6 @@
 import Header from './Header';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import TinderCards from './TinderCards';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 
 
@@ -9,10 +10,22 @@ function App() {
     <div className="app">
    
 
-    <Header />
-
+  
+   <Header />
     <Router>
-    <Header />
+      <Switch>
+
+
+      <Route path="/chat">
+          <h1>I am at chatpage</h1>
+        </Route>
+        
+        <Route path="/">
+          <TinderCards />
+        </Route>
+        
+      </Switch>
+    
        {/* TinderCards */}
      {/* Buttons below tinder cards */}
 
